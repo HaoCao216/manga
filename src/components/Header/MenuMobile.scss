@@ -1,0 +1,101 @@
+.menu-mobile {
+	background: #eb3349;
+	background: -webkit-linear-gradient(left, #eb3349 40%, #f45c43);
+	background: -o-linear-gradient(right, #eb3349 40%, #f45c43);
+	background: -moz-linear-gradient(right, #eb3349 40%, #f45c43);
+	background: linear-gradient(to right, #eb3349 40%, #f45c43);
+	position: fixed;
+	width: 300px;
+	top: 0;
+	left: -300px;
+	right: auto;
+	height: 100%;
+	z-index: 10000;
+	-webkit-transition: left 0.3s ease-in-out;
+	-moz-transition: left 0.3s ease-in-out;
+	-o-transition: left 0.3s ease-in-out;
+	transition: left 0.3s ease-in-out;
+	.menu-mobile__group {
+		padding: 0px 50px;
+	}
+	.list-menu__item {
+		color: #fff;
+		border-bottom: 1px solid rgba(250, 247, 250, 0.3);
+		padding: 22px 0px;
+		&:last-child {
+			border-bottom: none;
+		}
+		cursor: pointer;
+		.active-arrow {
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+		.arrow-icon {
+			display: inline-block;
+			padding-right: 10px;
+			width: 8px;
+			vertical-align:top;
+			svg {
+				transition: all 0.3s;
+			}
+		}
+		.list-menu__title {
+			display: inline-block;
+			text-transform: uppercase;
+			font-size: 15px;
+			.sub-menu__list {
+				display: none;
+				text-transform: uppercase;
+				font-size: 15px;
+				margin-left: 10px;
+				animation-duration: 0.2s;
+			}
+			.active {
+				display: block;
+			}
+		}
+		.sub-menu {
+			margin: 10px 0px 0px 0px!important;
+		}
+	}
+}
+
+.active {
+	.menu-mobile {
+		left: 0 !important;
+	}
+	.background-dark {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 1;
+	}
+}
+
+.account-group {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	div {
+		margin: 0px 6px;
+		color: #fff;
+		font-weight: 600;
+		padding: 5px 15px 6px 15px;
+		margin: 7px;
+		border: 2px solid #fff;
+		border-radius: 30px;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+		text-align: center;
+		cursor: pointer;
+		&:hover {
+			background-color: #000;
+			color: #fff;
+			border-color: #000;
+		}
+	}
+}
